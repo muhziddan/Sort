@@ -10,6 +10,7 @@ function bubbleSort(array) {
                 array[checker] = array[checker + 1]
                 array[checker + 1] = valueHolder
             }
+
             checker++
         }
     }

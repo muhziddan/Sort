@@ -1,6 +1,6 @@
 const numbers = [99, 44, 0, 2, 1, 283, 44, 87, 283, 4, 0];
 
-function mergeSort (array) {
+function mergeSort(array) {
   if (array.length === 1) {
     return array
   }
@@ -16,25 +16,25 @@ function mergeSort (array) {
 }
 
 function merge(left, right) {
-    const merged = []
-    let currentLeft = left[0]
-    let currentRight = right[0]
-    let leftCounter = 1
-    let rightCounter = 1
+  const merged = []
+  let currentLeft = left[0]
+  let currentRight = right[0]
+  let leftCounter = 1
+  let rightCounter = 1
 
-    while (currentLeft != undefined || currentRight != undefined) {
-        if (currentRight === undefined || currentLeft <= currentRight) {
-            merged.push(currentLeft)
-            currentLeft = left[leftCounter]
-            leftCounter++
-        } else {
-            merged.push(currentRight)
-            currentRight = right[rightCounter]
-            rightCounter++
-        }
+  while (currentLeft != undefined || currentRight != undefined) {
+    if (currentRight === undefined || currentLeft <= currentRight) {
+      merged.push(currentLeft)
+      currentLeft = left[leftCounter]
+      leftCounter++
+    } else {
+      merged.push(currentRight)
+      currentRight = right[rightCounter]
+      rightCounter++
     }
+  }
 
-    return merged
+  return merged
 }
 
 const answer = mergeSort(numbers);
