@@ -1,7 +1,7 @@
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function quickSort(array, left, right) {
-    const len = array.length
+    // const len = array.length
     let pivot
     let partitionIndex
 
@@ -13,6 +13,7 @@ function quickSort(array, left, right) {
         quickSort(array, left, partitionIndex - 1)
         quickSort(array, partitionIndex + 1, right)
     }
+
     return array
 }
 
@@ -26,6 +27,7 @@ function partition(array, pivot, left, right) {
             partitionIndex++
         }
     }
+
     swap(array, right, partitionIndex)
     return partitionIndex
 }
